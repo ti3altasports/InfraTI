@@ -108,6 +108,9 @@ echo -e "\n            RELATORIO DO TESTE DE CONECTIVIDADE\n \n Este host não e
   
   exit 1
 fi
+
+if $? = 0, then
+
 #-1.1------------ Executar se Teste OK ---------------#
 clear
 apt install -y figlet neofetch
@@ -201,6 +204,10 @@ echo "Versão $Version atualizada em $VersionUpdate" >> /etc/infraTI/logs/update
 cp -v /etc/infraTI/gitclonado/infraLinux/*.sh /etc/infraTI/scripts/
 chmod ugo+x /etc/infraTI/scripts/*.sh
 #-5-FIM-#
+else 
+	echo Falha!!!!!
+
+fi
 
 #-6------------ Adiciona Pasta ao PATH ---------------#
 
